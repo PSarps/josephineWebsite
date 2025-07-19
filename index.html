@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Josephine Ampomah Boateng - Optometrist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Roboto", sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f9;
         color: #333;
+        line-height: 1.6;
       }
       nav {
         background-color: #5c6bc0;
-        padding: 15px;
+        padding: 10px 20px;
         text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
       nav a {
         color: white;
@@ -25,41 +33,47 @@
       }
       nav a:hover {
         text-decoration: underline;
+        color: #ffcc00;
       }
 
       header {
         background-color: #5c6bc0;
         color: white;
         text-align: center;
-        padding: 50px 0;
+        padding: 100px 20px;
+        background-image: url("https://via.placeholder.com/1920x600"); /* Placeholder Image */
+        background-size: cover;
+        background-position: center;
       }
       header h1 {
+        font-size: 3rem;
         margin: 0;
-        font-size: 2.5rem;
       }
       header .bio {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-top: 10px;
         font-style: italic;
       }
 
-      /* New Styling for the Introduction Section */
+      /* New Styling for the Welcome Section */
       .welcome-section {
         text-align: center;
         padding: 50px 20px;
-        background-color: #ffffff;
-        margin-top: 30px;
+        background-color: white;
         border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-top: -50px;
+        position: relative;
+        z-index: 1;
       }
       .welcome-section h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: #5c6bc0;
+        margin-bottom: 20px;
       }
       .welcome-section p {
         font-size: 1.2rem;
         color: #666;
-        line-height: 1.6;
         max-width: 800px;
         margin: 0 auto;
         font-weight: 400;
@@ -67,25 +81,32 @@
 
       .container {
         padding: 40px 20px;
-        max-width: 900px;
-        margin: 0 auto;
+        max-width: 1000px;
+        margin: 50px auto;
       }
 
       .section-title {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         color: #5c6bc0;
-        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: 500;
       }
       .section-content {
         font-size: 1.1rem;
+        color: #333;
         margin-top: 10px;
+        line-height: 1.6;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
       footer {
         text-align: center;
         background-color: #5c6bc0;
         color: white;
-        padding: 20px 0;
+        padding: 25px 0;
         margin-top: 50px;
         border-top: 2px solid #4c5ba7;
       }
@@ -93,52 +114,63 @@
         color: white;
         text-decoration: none;
         margin: 0 15px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
       footer a:hover {
         text-decoration: underline;
+        color: #ffcc00;
       }
     </style>
   </head>
   <body>
+    <!-- Navigation Bar -->
     <nav>
       <a href="elevatorPitch.html">Elevator Pitch</a> |
       <a href="bio.html">Bio</a> |
       <a href="portfolio.html">Portfolio/Resume</a> |
     </nav>
 
-    <header class="welcome-section">
+    <!-- Header Section with Background Image -->
+    <header>
+      <h1>Josephine Ampomah Boateng</h1>
+      <p class="bio">
+        Optometrist | Lifelong Learner | Passionate About Eye Health
+      </p>
+    </header>
+
+    <!-- Welcome Section -->
+    <div class="welcome-section">
       <h2>Welcome to My Personal Website!</h2>
       <p>
         Hi there! I'm Josephine Ampomah Boateng, an optometrist with a passion
-        for eye health, data analytics and a lifelong learner. Through this
+        for eye health, data analytics, and a lifelong learner. Through this
         site, I want to share my journey in the field of optometry, my
         education, and the exciting projects I'm involved with. Feel free to
         explore the sections with the links above to get to know more about me,
         my research, and my passions.
       </p>
-    </header>
+    </div>
 
     <div class="container">
       <!-- Fun Facts Section -->
       <div class="section-title">Fun Facts About Optometry</div>
-      <p class="section-content">
+      <div class="section-content">
         Did you know? Optometrists not only provide routine eye exams but also
         play a critical role in detecting serious conditions like glaucoma,
         diabetes, and hypertension through early eye health screenings!
-      </p>
-
+      </div>
+      <br />
       <!-- Hobbies & Interests Section -->
       <div class="section-title">Hobbies & Interests</div>
-      <p class="section-content">
+      <div class="section-content">
         Outside of optometry, I enjoy reading, analyzing data, and discovering
         new places. I'm always curious to learn more and explore the world
         through both art and science.
-      </p>
-
+      </div>
+      <br />
       <!-- Education Section -->
       <div class="section-title">Education</div>
-      <p class="section-content">
+      <div class="section-content">
         <strong>Undergraduate:</strong> I graduated from Kwame Nkrumah
         University of Science and Technology (KNUST), where I developed a deep
         passion for eye care and health sciences.
@@ -146,7 +178,7 @@
         <strong>Postgraduate:</strong> I earned a Master’s degree in Health
         Systems Research, further expanding my knowledge in healthcare and its
         impact on communities.
-      </p>
+      </div>
     </div>
 
     <footer>
