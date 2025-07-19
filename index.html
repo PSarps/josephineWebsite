@@ -12,6 +12,22 @@
         background-color: #f4f4f9;
         color: #333;
       }
+      /* Navigation Bar */
+      nav {
+        background-color: #5c6bc0;
+        padding: 15px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin: 0 20px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
       header {
         background-color: #5c6bc0;
         color: white;
@@ -86,17 +102,31 @@
       .section p {
         margin: 15px 0;
       }
+
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
   <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#elevator-pitch">Elevator Pitch</a>
+      <a href="#bio">Bio</a>
+      <a href="#fun-facts">Fun Facts</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#education">Education</a>
+    </nav>
+
     <header>
       <h1>Josephine Ampomah Boateng</h1>
-      <p class="bio">Optometrist | Lifelong Learner | Passionate About Data Analyst</p>
+      <p class="bio">Optometrist | Lifelong Learner | Passionate About Eye Health</p>
     </header>
 
     <div class="container">
       <!-- Elevator Pitch Section -->
-      <div class="section">
+      <div id="elevator-pitch" class="section">
         <div class="section-title">Elevator Pitch</div>
         <p class="elevator-pitch">
           My name is Josephine Boateng. I am an optometrist with a Master's in Health Systems Research, and over the past years, I have gained invaluable experience in low vision care, pediatric eye health, and community-based rehabilitation. I excel in three critical areas: conducting precise clinical assessments in low vision, developing outreach and training programs for underserved communities, and conducting scientific research of community importance.
@@ -112,7 +142,7 @@
       </div>
 
       <!-- Bio Section -->
-      <div class="section">
+      <div id="bio" class="section">
         <div class="section-title">Bio</div>
         <p class="bio-text">
           Josephine Boateng is a researcher at the Kwame Nkrumah University of Science and Technology who pursued her master's in health systems research and is passionate about extending quality health care access to all through awareness creation and policy changes. She has co-authored 2 papers in scientific journals that highlighted the gap in low vision care in Ghana and was also an HM-KNUST Low Vision Project member, where she used her position to train more professionals in low vision and draw attention to the impact of interventions through her research papers.
@@ -120,7 +150,7 @@
       </div>
 
       <!-- Fun Facts Section -->
-      <div class="section">
+      <div id="fun-facts" class="section">
         <div class="section-title">Fun Facts About Optometry</div>
         <p class="fun-facts">
           Did you know? Optometrists not only provide routine eye exams but also play a critical role in detecting serious conditions like glaucoma, diabetes, and hypertension through early eye health screenings!
@@ -128,7 +158,7 @@
       </div>
 
       <!-- Hobbies Section -->
-      <div class="section">
+      <div id="hobbies" class="section">
         <div class="section-title">Hobbies & Interests</div>
         <p class="hobbies">
           Outside of optometry, I enjoy reading, painting, analyzing data, and discovering new places. I'm always curious to learn more and explore the world through both art and science.
@@ -136,7 +166,7 @@
       </div>
 
       <!-- Education Section -->
-      <div class="section">
+      <div id="education" class="section">
         <div class="section-title">Education</div>
         <p class="education-text">
           **Undergraduate**: I graduated from Kwame Nkrumah University of Science and Technology (KNUST), where I developed a deep passion for eye care and health sciences. <br>
@@ -147,6 +177,8 @@
 
     <footer>
       <p>Let’s connect:</p>
+      <a href="#" target="_blank">LinkedIn</a> |
+      <a href="#" target="_blank">Instagram</a> |
       <a href="mailto:josephineboateng532@gmail.com">Email: josephineboateng532@gmail.com</a>
     </footer>
   </body>
