@@ -17,18 +17,32 @@
         color: white;
         text-align: center;
         padding: 50px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
       header h1 {
         margin: 0;
+        font-size: 2.5rem;
       }
-      .bio {
+      header .bio {
         font-size: 1.2rem;
         margin-top: 10px;
+        font-style: italic;
       }
       .container {
-        padding: 20px;
-        max-width: 800px;
+        padding: 40px 20px;
+        max-width: 900px;
         margin: 0 auto;
+      }
+      .section {
+        background-color: white;
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+      .section:hover {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
       }
       .image-placeholder {
         width: 120px;
@@ -38,75 +52,97 @@
         margin: 20px auto;
       }
       .section-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         color: #5c6bc0;
-        margin-top: 30px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #5c6bc0;
+        padding-bottom: 10px;
       }
+      .elevator-pitch,
+      .bio-text,
       .fun-facts,
       .hobbies,
-      .elevator-pitch,
-      .bio-text {
+      .education-text {
         font-size: 1.1rem;
-        margin-top: 10px;
+        line-height: 1.8;
       }
       footer {
         text-align: center;
         background-color: #5c6bc0;
         color: white;
-        padding: 15px 0;
+        padding: 20px 0;
         margin-top: 50px;
+        border-top: 2px solid #4c5ba7;
       }
       footer a {
         color: white;
         text-decoration: none;
-        margin: 0 10px;
+        margin: 0 15px;
+        font-size: 1.1rem;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .section p {
+        margin: 15px 0;
       }
     </style>
   </head>
   <body>
     <header>
       <h1>Josephine Ampomah Boateng</h1>
-      <p class="bio">
-        Optometrist | Lifelong Learner | Passionate About Eye Health
-      </p>
+      <p class="bio">Optometrist | Lifelong Learner | Passionate About Eye Health</p>
     </header>
 
     <div class="container">
-      <div class="image-placeholder"></div>
+      <!-- Elevator Pitch Section -->
+      <div class="section">
+        <div class="section-title">Elevator Pitch</div>
+        <p class="elevator-pitch">
+          My name is Josephine Boateng. I am an optometrist with a Master's in Health Systems Research, and over the past years, I have gained invaluable experience in low vision care, pediatric eye health, and community-based rehabilitation. I excel in three critical areas: conducting precise clinical assessments in low vision, developing outreach and training programs for underserved communities, and conducting scientific research of community importance.
+          <br><br>
+          What sets me apart is my proven track record in organising training programs for professionals to equip themselves with the skills required to provide quality health care. I also have a passion for driving innovation and practical solutions to enhance healthcare in my country through advocacy. Through my research work, I have drawn attention and consequent interventions towards low vision in my country.
+          <br><br>
+          I can help employers and partners bridge the gap between clinical research and real-world application, ultimately making patient care more effective, accessible, and life-changing. 
+          <br><br>
+          I’m looking to connect with organisations or academic programs ready to invest in innovative approaches to vision rehabilitation. If you're seeking someone who can transform vision care into tangible improvements in patients' lives, let’s talk about how I can contribute to your team.
+          <br><br>
+          Thank you for your time, and I look forward to exploring potential opportunities together.
+        </p>
+      </div>
 
-      <div class="section-title">Elevator Pitch</div>
-      <p class="elevator-pitch">
-        My name is Josephine Boateng. I am an optometrist with a Master's in Health Systems Research, and over the past years, I have gained invaluable experience in low vision care, pediatric eye health, and community-based rehabilitation. I excel in three critical areas: conducting precise clinical assessments in low vision, developing outreach and training programs for underserved communities, and conducting scientific research of community importance.
-        <br><br>
-        What sets me apart is my proven track record in organising training programs for professionals to equip themselves with the skills required to provide quality health care. I also have a passion for driving innovation and practical solutions to enhance healthcare in my country through advocacy. Through my research work, I have drawn attention and consequent interventions towards low vision in my country.
-        <br><br>
-        I can help employers and partners bridge the gap between clinical research and real-world application, ultimately making patient care more effective, accessible, and life-changing. 
-        <br><br>
-        I’m looking to connect with organisations or academic programs ready to invest in innovative approaches to vision rehabilitation. If you're seeking someone who can transform vision care into tangible improvements in patients' lives, let’s talk about how I can contribute to your team.
-        <br><br>
-        Thank you for your time, and I look forward to exploring potential opportunities together.
-      </p>
+      <!-- Bio Section -->
+      <div class="section">
+        <div class="section-title">Bio</div>
+        <p class="bio-text">
+          Josephine Boateng is a researcher at the Kwame Nkrumah University of Science and Technology who pursued her master's in health systems research and is passionate about extending quality health care access to all through awareness creation and policy changes. She has co-authored 2 papers in scientific journals that highlighted the gap in low vision care in Ghana and was also an HM-KNUST Low Vision Project member, where she used her position to train more professionals in low vision and draw attention to the impact of interventions through her research papers.
+        </p>
+      </div>
 
-      <div class="section-title">Bio</div>
-      <p class="bio-text">
-        Josephine Boateng is a researcher at the Kwame Nkrumah University of Science and Technology who pursued her master's in health systems research and is passionate about extending quality health care access to all through awareness creation and policy changes. She has co-authored 2 papers in scientific journals that highlighted the gap in low vision care in Ghana and was also an HM-KNUST Low Vision Project member, where she used her position to train more professionals in low vision and draw attention to the impact of interventions through her research papers.
-      </p>
+      <!-- Fun Facts Section -->
+      <div class="section">
+        <div class="section-title">Fun Facts About Optometry</div>
+        <p class="fun-facts">
+          Did you know? Optometrists not only provide routine eye exams but also play a critical role in detecting serious conditions like glaucoma, diabetes, and hypertension through early eye health screenings!
+        </p>
+      </div>
 
-      <div class="section-title">Fun Facts About Optometry</div>
-      <p class="fun-facts">
-        Did you know? Optometrists not only provide routine eye exams but also play a critical role in detecting serious conditions like glaucoma, diabetes, and hypertension through early eye health screenings!
-      </p>
+      <!-- Hobbies Section -->
+      <div class="section">
+        <div class="section-title">Hobbies & Interests</div>
+        <p class="hobbies">
+          Outside of optometry, I enjoy reading, painting, analyzing data, and discovering new places. I'm always curious to learn more and explore the world through both art and science.
+        </p>
+      </div>
 
-      <div class="section-title">Hobbies & Interests</div>
-      <p class="hobbies">
-        Outside of optometry, I enjoy reading, painting, analyzing data, and discovering new places. I'm always curious to learn more and explore the world through both art and science.
-      </p>
-
-      <div class="section-title">Education</div>
-      <p>
-        **Undergraduate**: I graduated from Kwame Nkrumah University of Science and Technology (KNUST), where I developed a deep passion for eye care and health sciences. <br>
-        **Postgraduate**: I earned a Master’s degree in Health Systems Research, further expanding my knowledge in healthcare and its impact on communities.
-      </p>
+      <!-- Education Section -->
+      <div class="section">
+        <div class="section-title">Education</div>
+        <p class="education-text">
+          **Undergraduate**: I graduated from Kwame Nkrumah University of Science and Technology (KNUST), where I developed a deep passion for eye care and health sciences. <br>
+          **Postgraduate**: I earned a Master’s degree in Health Systems Research, further expanding my knowledge in healthcare and its impact on communities.
+        </p>
+      </div>
     </div>
 
     <footer>
