@@ -5,119 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Josephine Ampomah Boateng - Optometrist</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <style>
+      /* General Styles */
       body {
-        font-family: "Roboto", sans-serif;
+        font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f9;
+        background-color: #f7f7f7;
         color: #333;
         line-height: 1.6;
+        overflow-x: hidden;
       }
+
+      /* Gradient Navigation (Centered) */
       nav {
-        background-color: #5c6bc0;
-        padding: 10px 20px;
-        text-align: center;
-        position: sticky;
+        background: linear-gradient(135deg, #5c6bc0, #7e8cfd);
+        padding: 20px;
+        position: fixed;
         top: 0;
+        left: 0;
+        width: 100%;
         z-index: 100;
+        text-align: center;
       }
+
       nav a {
         color: white;
         text-decoration: none;
-        font-size: 1.2rem;
-        margin: 0 20px;
-      }
-      nav a:hover {
-        text-decoration: underline;
-        color: #ffcc00;
+        font-size: 1.1rem;
+        margin: 0 25px;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: color 0.3s ease, transform 0.3s ease;
       }
 
+      nav a:hover {
+        color: #ffcc00;
+        transform: translateY(-5px);
+      }
+
+      /* Header Section - Transparent Black Background */
       header {
-        background-color: #5c6bc0;
-        color: white;
-        text-align: center;
-        padding: 100px 20px;
-        background-image: url("https://via.placeholder.com/1920x600"); /* Placeholder Image */
+        height: 100vh;
+        background-image: url("https://via.placeholder.com/1920x1200?text=Optometry+Header");
         background-size: cover;
         background-position: center;
-      }
-      header h1 {
-        font-size: 3rem;
-        margin: 0;
-      }
-      header .bio {
-        font-size: 1.4rem;
-        margin-top: 10px;
-        font-style: italic;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+        background-color: rgba(0, 0, 0, 0.9); /* Transparent Black Background */
       }
 
-      /* New Styling for the Welcome Section */
+      header::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Transparent Black Overlay */
+      }
+
+      header h1 {
+        font-size: 4rem;
+        z-index: 2;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      header .bio {
+        font-size: 1.4rem;
+        font-style: italic;
+        margin-top: 20px;
+        z-index: 2;
+      }
+
+      /* Smooth Scroll */
+      .scroll-down {
+        position: absolute;
+        bottom: 20px;
+        z-index: 2;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ffcc00;
+        cursor: pointer;
+        animation: bounce 1.5s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Welcome Section */
       .welcome-section {
+        background: #fff;
+        padding: 60px 20px;
         text-align: center;
-        padding: 50px 20px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        margin-top: -50px;
+        max-width: 900px;
+        margin: -100px auto 60px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
         position: relative;
         z-index: 1;
       }
+
       .welcome-section h2 {
         font-size: 2.5rem;
         color: #5c6bc0;
         margin-bottom: 20px;
       }
+
       .welcome-section p {
         font-size: 1.2rem;
         color: #666;
         max-width: 800px;
         margin: 0 auto;
         font-weight: 400;
+        line-height: 1.7;
       }
 
+      /* Container & Sections */
       .container {
-        padding: 40px 20px;
-        max-width: 1000px;
-        margin: 50px auto;
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .section-title {
-        font-size: 1.7rem;
+        font-size: 2rem;
         color: #5c6bc0;
-        margin-bottom: 15px;
-        font-weight: 500;
-      }
-      .section-content {
-        font-size: 1.1rem;
-        color: #333;
-        margin-top: 10px;
-        line-height: 1.6;
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        font-weight: 600;
+        text-align: center;
       }
 
-      footer {
-        text-align: center;
+      .section-content {
+        font-size: 1.2rem;
+        color: #333;
+        margin-top: 15px;
+        line-height: 1.7;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .section-content:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* CTA Button */
+      .cta-button {
+        display: inline-block;
         background-color: #5c6bc0;
         color: white;
-        padding: 25px 0;
-        margin-top: 50px;
-        border-top: 2px solid #4c5ba7;
+        padding: 14px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-top: 25px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
       }
+
+      .cta-button:hover {
+        background-color: #ffcc00;
+        transform: translateY(-5px);
+      }
+
+      /* Footer Section */
+      footer {
+        background: linear-gradient(135deg, #5c6bc0, #7e8cfd);
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        position: relative;
+      }
+
+      footer p {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
       footer a {
         color: white;
         text-decoration: none;
-        margin: 0 15px;
         font-size: 1.2rem;
+        margin: 0 15px;
+        transition: color 0.3s ease;
       }
+
       footer a:hover {
-        text-decoration: underline;
         color: #ffcc00;
       }
     </style>
@@ -127,15 +220,16 @@
     <nav>
       <a href="elevatorPitch.html">Elevator Pitch</a> |
       <a href="bio.html">Bio</a> |
-      <a href="portfolio.html">Portfolio/Resume</a> |
+      <a href="portfolio.html">Portfolio/Resume</a>
     </nav>
 
-    <!-- Header Section with Background Image -->
+    <!-- Header Section with Transparent Black Background -->
     <header>
       <h1>Josephine Ampomah Boateng</h1>
       <p class="bio">
         Optometrist | Lifelong Learner | Passionate About Eye Health
       </p>
+      <span class="scroll-down">&#x21E3;</span>
     </header>
 
     <!-- Welcome Section -->
@@ -143,11 +237,8 @@
       <h2>Welcome to My Personal Website!</h2>
       <p>
         Hi there! I'm Josephine Ampomah Boateng, an optometrist with a passion
-        for eye health, data analytics, and a lifelong learner. Through this
-        site, I want to share my journey in the field of optometry, my
-        education, and the exciting projects I'm involved with. Feel free to
-        explore the sections with the links above to get to know more about me,
-        my research, and my passions.
+        for eye health, data analytics, and a lifelong pursuit of knowledge. I'm
+        thrilled to share my journey with you through this site.
       </p>
     </div>
 
@@ -155,37 +246,48 @@
       <!-- Fun Facts Section -->
       <div class="section-title">Fun Facts About Optometry</div>
       <div class="section-content">
-        Did you know? Optometrists not only provide routine eye exams but also
-        play a critical role in detecting serious conditions like glaucoma,
-        diabetes, and hypertension through early eye health screenings!
+        Optometrists don’t just help with eye exams – we’re crucial in detecting
+        early signs of serious health conditions like diabetes, glaucoma, and
+        hypertension through eye health screenings.
       </div>
-      <br />
+
       <!-- Hobbies & Interests Section -->
       <div class="section-title">Hobbies & Interests</div>
       <div class="section-content">
-        Outside of optometry, I enjoy reading, analyzing data, and discovering
-        new places. I'm always curious to learn more and explore the world
-        through both art and science.
+        Outside of optometry, I love reading, exploring new places, and
+        analyzing data. I’m constantly on the lookout for opportunities to learn
+        and grow.
       </div>
-      <br />
+
       <!-- Education Section -->
       <div class="section-title">Education</div>
       <div class="section-content">
-        <strong>Undergraduate:</strong> I graduated from Kwame Nkrumah
-        University of Science and Technology (KNUST), where I developed a deep
-        passion for eye care and health sciences.
+        <strong>Undergraduate:</strong> Graduated from Kwame Nkrumah University
+        of Science and Technology (KNUST), where I developed a strong passion
+        for eye care.
         <br />
-        <strong>Postgraduate:</strong> I earned a Master’s degree in Health
-        Systems Research, further expanding my knowledge in healthcare and its
-        impact on communities.
+        <strong>Postgraduate:</strong> Completed my Master’s in Health Systems
+        Research, broadening my knowledge of healthcare and its impact on
+        communities.
       </div>
+
+      <!-- Call to Action Button -->
+      <a href="mailto:josephineboateng532@gmail.com" class="cta-button"
+        >Get In Touch</a
+      >
     </div>
 
+    <!-- Footer Section -->
     <footer>
-      <p>Let’s connect:</p>
-      <a href="mailto:josephineboateng532@gmail.com"
-        >Email: josephineboateng532@gmail.com</a
-      >
+      <div class="nav-footer-links">
+        <a href="index.html">Home</a> | <a href="bio.html">Bio</a> |
+        <a href="portfolio.html">Portfolio/Resume</a>
+        <p>
+          <a href="mailto:josephineboateng532@gmail.com"
+            >Email: josephineboateng532@gmail.com</a
+          >
+        </p>
+      </div>
     </footer>
   </body>
 </html>
