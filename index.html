@@ -20,7 +20,6 @@
         overflow-x: hidden;
       }
 
-      /* Gradient Navigation (Centered) */
       nav {
         background: linear-gradient(135deg, #5c6bc0, #7e8cfd);
         padding: 20px;
@@ -30,6 +29,7 @@
         width: 100%;
         z-index: 100;
         text-align: center;
+        box-sizing: border-box;
       }
 
       nav a {
@@ -87,7 +87,6 @@
         z-index: 2;
       }
 
-      /* Smooth Scroll */
       .scroll-down {
         position: absolute;
         bottom: 20px;
@@ -213,11 +212,79 @@
       footer a:hover {
         color: #ffcc00;
       }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        nav {
+          padding: 15px;
+        }
+
+        nav a {
+          font-size: 1rem;
+          margin: 0 15px;
+        }
+
+        header h1 {
+          font-size: 2.5rem;
+        }
+
+        header .bio {
+          font-size: 1.2rem;
+        }
+
+        .welcome-section h2 {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .section-content {
+          font-size: 1rem;
+        }
+
+        .cta-button {
+          font-size: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        nav a {
+          font-size: 0.9rem;
+          margin: 0 10px;
+        }
+
+        header h1 {
+          font-size: 2rem;
+        }
+
+        header .bio {
+          font-size: 1rem;
+        }
+
+        .welcome-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .section-title {
+          font-size: 1.3rem;
+        }
+
+        .section-content {
+          font-size: 0.95rem;
+        }
+
+        .cta-button {
+          font-size: 0.95rem;
+        }
+      }
     </style>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav>
+      <a href="index.html">Home</a> |
       <a href="elevatorPitch.html">Elevator Pitch</a> |
       <a href="bio.html">Bio</a> |
       <a href="portfolio.html">Portfolio/Resume</a>
@@ -227,7 +294,7 @@
     <header>
       <h1>Josephine Ampomah Boateng</h1>
       <p class="bio">
-        Optometrist | Lifelong Learner | Passionate About Data Analytics
+        Optometrist | Lifelong Learner | Passionate About Eye Health
       </p>
       <span class="scroll-down">&#x21E3;</span>
     </header>
